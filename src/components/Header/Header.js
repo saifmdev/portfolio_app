@@ -29,8 +29,8 @@ const Header = () => (
           {/* <DiChrome size="3rem" /> */}
           <a>
             <img
-              alt="saifm.dev"
-              src="/images/saifm.svg"
+              alt="saifm.ca"
+              src="/images/saifm_ca2.svg"
               width="150"
               height="70"
             />
