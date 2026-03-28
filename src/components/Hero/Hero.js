@@ -1,34 +1,47 @@
 import React from "react";
-import Typist from "react-typist";
+import { TypeAnimation } from "react-type-animation";
+import BackgroundAnimation from "../BackgrooundAnimation/BackgroundAnimation";
 
 import {
-  Section,
   SectionText,
   SectionTitle,
 } from "../../styles/GlobalComponents";
-import Button from "../../styles/GlobalComponents/Button";
-import { LeftSection } from "./HeroStyles";
+import { HeroContainer, LeftSection, HeroVisual } from "./HeroStyles";
 
-const Hero = (props) => (
-  <>
-    <Section row nopadding>
-      <LeftSection>
-        <Typist>
-          <SectionTitle main center>
-            Hi there, <br />
-            <Typist.Delay ms={600} />
-            My name is Saif
-            <Typist.Delay ms={400} />
-          </SectionTitle>
-        </Typist>
-        <SectionText>
-          I am a freelance python developer specialized in data analysis and
-          machine learning.
-        </SectionText>
-        {/* <Button onClick={props.handleClick}>Learn More</Button> */}
-      </LeftSection>
-    </Section>
-  </>
+const Hero = () => (
+  <HeroContainer row nopadding>
+    <LeftSection>
+      <SectionTitle main>
+        <TypeAnimation
+          sequence={[
+            "Hi there,\nMy name is Saif",
+            400
+          ]}
+          speed={30}
+          wrapper="span"
+          repeat={0}
+          style={{ whiteSpace: "pre-line", display: "inline-block" }}
+        />
+      </SectionTitle>
+
+      <SectionText>
+        <TypeAnimation
+          sequence={[
+            2000,
+            "\nAspiring Electrical Apprentice with a strong drive to build a career in industrial systems, PLCs, and automation. \n\nPassionate about doing hands-on work, troubleshooting, and understanding how complex electrical and control systems operate in real-world environments. ",
+          ]}
+          speed={80}
+          wrapper="span"
+          repeat={0}
+          style={{ whiteSpace: "pre-line", display: "inline-block" }}
+        />
+      </SectionText>
+    </LeftSection>
+
+    <HeroVisual>
+      <BackgroundAnimation />
+    </HeroVisual>
+  </HeroContainer>
 );
 
 export default Hero;

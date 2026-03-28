@@ -46,7 +46,7 @@ const Timeline = () => {
       const index = Math.round(
         (carouselRef.current.scrollLeft /
           (carouselRef.current.scrollWidth * 0.7)) *
-          TimeLineData.length
+        TimeLineData.length
       );
 
       setActiveItem(index);
@@ -57,27 +57,28 @@ const Timeline = () => {
   // avoids a bug where content is covered up if coming from smaller screen
   useEffect(() => {
     const handleResize = () => {
-      scroll(carouselRef.current, 0);
+      if (carouselRef.current) {
+        scroll(carouselRef.current, 0);
+      }
     };
 
     window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <Section id="about">
+    <Section id="about" nopadding>
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        I am a Junior Data Analyst and Python Developer. I love examining data
-        and try to find patterns and correlations that lead to breakthroughs.
-        Data provides different perspectives to stakeholders and is the bread
-        and butter of any industry.<br /><br /> I am focused on improving daily in the field
-        of Data Analysis and study Technical Analysis / trade on my spare time.
-        My favourite hobbies include exercise, cooking and gaming (on and off,
-        depends how busy I am). I love to travel and interact with different
-        cultures and learn about people. <br /><br />Favourite Vacation Destination: Rio Di
-        Janeiro, Brazil. Been there 3 times so far and its simply, heaven on
-        earth!
+        I am an aspiring PLC programmer and automation professional with a strong foundation in programming and analytical problem-solving. I am passionate about understanding how complex systems operate, from electrical controls to industrial automation, and continuously work on developing my skills in PLC programming, control systems, and troubleshooting real-world processes.
+        <br /><br />
+        With a background in data analysis and Python development, I bring a unique perspective to automation—focusing on efficiency, pattern recognition, and system optimization. I am driven to bridge the gap between software and electrical systems to build smarter, more reliable solutions in industrial environments.
+        <br /><br />
+        I am committed to continuous learning and hands-on growth in the field of automation and control systems, with a long-term goal of becoming a highly skilled PLC and industrial systems specialist.
+        <br /><br />
+        Outside of work, I enjoy staying active, cooking, and gaming when time allows. I also love traveling and experiencing different cultures—Rio de Janeiro, Brazil remains my favorite destination.
       </SectionText>
+      <br />
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
           {TimeLineData.map((item, index) => (
@@ -101,11 +102,11 @@ const Timeline = () => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M2.5 5.5C3.88071 5.5 5 4.38071 5 3V3.5L208 3.50002V2.50002L5 2.5V3C5 1.61929 3.88071 0.5 2.5 0.5C1.11929 0.5 0 1.61929 0 3C0 4.38071 1.11929 5.5 2.5 5.5Z"
                       fill="url(#paint0_linear)"
-                      fill-opacity="0.33"
+                      fillOpacity="0.33"
                     />
                     <defs>
                       <linearGradient
@@ -120,7 +121,7 @@ const Timeline = () => {
                         <stop
                           offset="0.79478"
                           stopColor="white"
-                          stop-opacity="0"
+                          stopOpacity="0"
                         />
                       </linearGradient>
                     </defs>

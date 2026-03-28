@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
-import { DiChrome } from "react-icons/di";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 import {
   Container,
@@ -10,32 +9,28 @@ import {
   Div3,
   NavLink,
   SocialIcons,
-  Logo,
   SocialIconsContainer,
 } from "./HeaderStyles";
 
 const Header = () => (
   <Container>
     <Div1>
-      <Link href="/">
-        <a
-          style={{
-            display: "flex",
-            alignItems: "center",
-            color: "white",
-            height: "40px",
-          }}
-        >
-          {/* <DiChrome size="3rem" /> */}
-          <a>
-            <img
-              alt="saifm.ca"
-              src="/images/saifm_ca2.svg"
-              width="150"
-              height="70"
-            />
-          </a>
-        </a>
+      <Link
+        href="/"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          color: "white",
+          height: "40px",
+        }}
+      >
+        <img
+          alt="saifm.ca"
+          src="/images/saifm_ca2.svg"
+          width="150"
+          height="70"
+          style={{ width: "150px", height: "auto", maxWidth: "100%" }}
+        />
       </Link>
     </Div1>
     <Div2>
@@ -55,19 +50,7 @@ const Header = () => (
         </Link>
       </li>
     </Div2>
-    <Div3>
-      <SocialIconsContainer>
-        <SocialIcons href="https://github.com/saifmdev" target={"_blank"}>
-          <AiFillGithub size="3rem" />
-        </SocialIcons>
-        <SocialIcons
-          href="https://www.linkedin.com/in/saifmdev/"
-          target={"_blank"}
-        >
-          <AiFillLinkedin size="3rem" />
-        </SocialIcons>
-      </SocialIconsContainer>
-    </Div3>
+
   </Container>
 );
 

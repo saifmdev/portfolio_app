@@ -1,6 +1,6 @@
 import React from "react";
 import { DiFirebase, DiReact, DiZend, DiPython } from "react-icons/di";
-import {GoGraph} from "react-icons/go"
+import { GoGraph } from "react-icons/go"
 import {
   Section,
   SectionDivider,
@@ -33,25 +33,15 @@ const Technologies = () => (
         <ListContainer>
           <ListTitle>Programming</ListTitle>
           <ListParagraph>
-            Experiece with <br />
             <ExternalLinks>Python</ExternalLinks>
-            <br />
             <ExternalLinks>R</ExternalLinks>
-            <br />
             <ExternalLinks>R Shiny</ExternalLinks>
-            <br />
             <ExternalLinks>SciPy</ExternalLinks>
-            <br />
             <ExternalLinks>NumPy</ExternalLinks>
-            <br />
             <ExternalLinks>Tensorflow</ExternalLinks>
-            <br />
             <ExternalLinks>SQL</ExternalLinks>
-            <br />
             <ExternalLinks>JavaScript</ExternalLinks>
-            <br />
             <ExternalLinks>Ruby on Rails</ExternalLinks>
-            <br />
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -62,15 +52,10 @@ const Technologies = () => (
         <ListContainer>
           <ListTitle>Databases & Cloud Services</ListTitle>
           <ListParagraph>
-            Experience with <br />
             <ExternalLinks>AWS</ExternalLinks>
-            <br />
             <ExternalLinks>GCP</ExternalLinks>
-            <br />
             <ExternalLinks>MySQL</ExternalLinks>
-            <br />
             <ExternalLinks>MongoDB</ExternalLinks>
-            <br />{" "}
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -81,22 +66,17 @@ const Technologies = () => (
         <ListContainer>
           <ListTitle>Data Visualization</ListTitle>
           <ListParagraph>
-            Experience with <br />
             <ExternalLinks>Tableau</ExternalLinks>
-            <br />
             <ExternalLinks>Looker</ExternalLinks>
-            <br />
             <ExternalLinks>PowerBI</ExternalLinks>
-            <br />
             <ExternalLinks>Matplotlib</ExternalLinks>
-            <br />
             <ExternalLinks>ggplot2</ExternalLinks>
-            <br />{" "}
           </ListParagraph>
         </ListContainer>
       </ListItem>
     </List>
     <SectionDivider colorAlt />
+
   </Section>
 );
 

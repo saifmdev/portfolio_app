@@ -29,7 +29,7 @@ const Projects = () => (
       {projects.map((p, i) => {
         return (
           <BlogCard key={i}>
-            <Img src={p.image} />
+            <Img src={p.image} alt={p.title} />
             <TitleContent>
               <HeaderThree title>{p.title}</HeaderThree>
               <Hr />

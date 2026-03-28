@@ -6,22 +6,17 @@ const GlobalStyles = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    }
+  html, body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: ${props => props.theme.fonts.main};
+  background: ${props => props.theme.colors.background1};
+  color: ${props => props.theme.colors.primary1};
+  scroll-behavior: smooth;
   }
-  html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
 
-  }
-  body {
-    font-family: ${props => props.theme.fonts.main};
-    font-size: 1.6rem;
-    background: ${props => props.theme.colors.background1};
-    color: ${props => props.theme.colors.primary1};
-    cursor: default;
-
-  }
   h1,h2,h3,h4,h5,h6,button {
     font-family: ${props => props.theme.fonts.title};
   }
@@ -31,7 +26,37 @@ const GlobalStyles = createGlobalStyle`
   li{
     list-style: none;
   }
+  .bg-animation-wrapper {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
 
+.BgAnimation__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: translateX(200px);
+}
+
+@media screen and (max-width: 768px) {
+  .BgAnimation__svg {
+    width: 280px;
+    transform: translateX(40px);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .BgAnimation__svg {
+    width: 220px;
+    opacity: 1;
+    transform: translateX(40px);
+  }
+}
 `;
+
 
 export default GlobalStyles;
