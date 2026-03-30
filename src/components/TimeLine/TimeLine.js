@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 
 import {
+  AboutText,
   CarouselButton,
   CarouselButtonDot,
   CarouselButtons,
@@ -69,7 +70,7 @@ const Timeline = () => {
   return (
     <Section id="about" nopadding>
       <SectionTitle>About Me</SectionTitle>
-      <SectionText>
+      <AboutText>
         I am an aspiring PLC programmer and automation professional with a strong foundation in programming and analytical problem-solving. I am passionate about understanding how complex systems operate, from electrical controls to industrial automation, and continuously work on developing my skills in PLC programming, control systems, and troubleshooting real-world processes.
         <br /><br />
         With a background in data analysis and Python development, I bring a unique perspective to automation—focusing on efficiency, pattern recognition, and system optimization. I am driven to bridge the gap between software and electrical systems to build smarter, more reliable solutions in industrial environments.
@@ -77,7 +78,7 @@ const Timeline = () => {
         I am committed to continuous learning and hands-on growth in the field of automation and control systems, with a long-term goal of becoming a highly skilled PLC and industrial systems specialist.
         <br /><br />
         Outside of work, I enjoy staying active, cooking, and gaming when time allows. I also love traveling and experiencing different cultures—Rio de Janeiro, Brazil remains my favorite destination.
-      </SectionText>
+      </AboutText>
       <br />
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
