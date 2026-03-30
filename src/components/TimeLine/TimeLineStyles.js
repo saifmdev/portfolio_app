@@ -136,3 +136,16 @@ export const CarouselButtonDot = styled.div`
   width: 3px;
   height: 3px;
 `
+export const AboutText = styled.p`
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 1040px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: justify;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1rem;
+    text-align: left;
+  }
+`;
