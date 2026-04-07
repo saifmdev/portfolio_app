@@ -1,5 +1,5 @@
 import React from "react";
-import { DiFirebase, DiReact, DiZend, DiPython } from "react-icons/di";
+import { DiDatabase, DiPython } from "react-icons/di";
 import { GoGraph } from "react-icons/go"
 import {
   Section,
@@ -33,21 +33,16 @@ const Technologies = () => (
         <ListContainer>
           <ListTitle>Programming</ListTitle>
           <ListParagraph>
+            <ExternalLinks>Ignition (HMI/SCADA)</ExternalLinks>
             <ExternalLinks>Python</ExternalLinks>
-            <ExternalLinks>R</ExternalLinks>
-            <ExternalLinks>R Shiny</ExternalLinks>
-            <ExternalLinks>SciPy</ExternalLinks>
-            <ExternalLinks>NumPy</ExternalLinks>
-            <ExternalLinks>Tensorflow</ExternalLinks>
             <ExternalLinks>SQL</ExternalLinks>
             <ExternalLinks>JavaScript</ExternalLinks>
-            <ExternalLinks>Ruby on Rails</ExternalLinks>
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
         <picture>
-          <DiFirebase size="3rem" />
+          <DiDatabase size="3rem" />
         </picture>
         <ListContainer>
           <ListTitle>Databases & Cloud Services</ListTitle>
@@ -67,7 +62,6 @@ const Technologies = () => (
           <ListTitle>Data Visualization</ListTitle>
           <ListParagraph>
             <ExternalLinks>Tableau</ExternalLinks>
-            <ExternalLinks>Looker</ExternalLinks>
             <ExternalLinks>PowerBI</ExternalLinks>
             <ExternalLinks>Matplotlib</ExternalLinks>
             <ExternalLinks>ggplot2</ExternalLinks>
